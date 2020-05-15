@@ -127,7 +127,7 @@ namespace SocketCore {
             Byte[] bytes=new Byte[dataSize];
             Array.Copy(buffer,0,bytes,0,dataSize);
             udpClientWrap.ReceivedBytesList.Add(bytes);
-            Console.WriteLine($"TcpServer => 第{udpClientWrap.ReceivedBytesList.Count}次收到来自{udpClientWrap.EndPoint.ToString()}的{dataSize}字节数组");
+            Console.WriteLine($"UdpServer => 第{udpClientWrap.ReceivedBytesList.Count}次收到来自{udpClientWrap.EndPoint.ToString()}的{dataSize}字节数组");
             this.SendToAsync(udpClientWrap,bytes);
         }
     }
