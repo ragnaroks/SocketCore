@@ -79,6 +79,7 @@ namespace SocketCore {
             //初始化套接字
             try{
                 this.ServerSocket=new Socket(AddressFamily.InterNetworkV6,SocketType.Dgram,ProtocolType.Udp){DualMode=true,Blocking=false};
+                //this.ServerSocket.SetSocketOption(SocketOptionLevel.Socket,SocketOptionName.ReuseAddress,true);
             }catch{
                 throw;
             }
